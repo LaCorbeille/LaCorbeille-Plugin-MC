@@ -1,0 +1,14 @@
+name: LaCorbeille
+version: '${project.version}'
+main: com.noasecond.lacorbeille.LaCorbeille
+api-version: 1.19
+authors: [ ElloWorld, Noa Second ]
+description: Plugin custom pour le serveur minecraft La Corbeille.
+website: https://noasecond.com/
+commands:
+  discord:
+    description: Affiche le lien du discord du serveur.
+    usage: /discord
+  lobby:
+    description: Téléporte le joueur au lobby.
+    usage: /lobby
