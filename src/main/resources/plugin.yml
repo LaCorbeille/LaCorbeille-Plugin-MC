@@ -12,3 +12,6 @@ commands:
   lobby:
     description: Téléporte le joueur au lobby.
     usage: /lobby
+  color:
+    description: Défini une couleur au joueur.
+    usage: /color

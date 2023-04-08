@@ -1,5 +1,6 @@
 package com.noasecond.lacorbeille;
 
+import com.noasecond.lacorbeille.commands.CommandColor;
 import com.noasecond.lacorbeille.commands.CommandDiscord;
 import com.noasecond.lacorbeille.commands.CommandLobby;
 import com.noasecond.lacorbeille.lobbyevents.JoinLobbyEvent;
@@ -11,6 +12,7 @@ public final class LaCorbeille extends JavaPlugin {
     public void onEnable() {
         getCommand("discord").setExecutor(new CommandDiscord());
         getCommand("lobby").setExecutor(new CommandLobby());
+        getCommand("color").setExecutor(new CommandColor());
         getServer().getPluginManager().registerEvents(new JoinLobbyEvent(), this);
 
     }
