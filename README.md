@@ -4,4 +4,10 @@
 </div>
 
 ## Description :
-Plugin custom pour le serveur minecraft La Corbeille.
+Custom plugin for La Corbeille minecraft server.
+
+## Command list :
+- help
+- color
+- discord
+- lobby
