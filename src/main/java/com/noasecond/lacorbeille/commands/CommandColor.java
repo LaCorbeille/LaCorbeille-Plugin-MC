@@ -1,14 +1,20 @@
 package com.noasecond.lacorbeille.commands;
 
+import com.noasecond.lacorbeille.ConfigManager;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 
 import java.util.Arrays;
 
 public class CommandColor implements CommandExecutor {
+    private static ConfigManager configManager;
+    public CommandColor(Plugin plugin) {
+        configManager = new ConfigManager(plugin, "colors.yml");
+    }
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
@@ -37,9 +43,12 @@ public class CommandColor implements CommandExecutor {
             return true;
         }
 
-        player.setDisplayName(color + player.getName()); //Couleur dans le tchat
-        player.setPlayerListName(color + player.getName()); //Couleur dans le menu tab
+        player.setDisplayName(color + player.getName()); //Color in tchat
+        player.setPlayerListName(color + player.getName()); //Color in tablist
         player.sendMessage("Votre nom a été coloré en " + color + args[0]);
+
+        configManager.setPlayerColor(player, color); //Save color in conf
+
         return true;
     }
 }

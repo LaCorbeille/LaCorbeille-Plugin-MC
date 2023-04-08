@@ -1,4 +1,4 @@
-package com.noasecond.lacorbeille.lobbyevents;
+package com.noasecond.lacorbeille.events.lobbyevents;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
