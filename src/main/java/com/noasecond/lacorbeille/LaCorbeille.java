@@ -8,7 +8,6 @@ import com.noasecond.lacorbeille.events.lobbyevents.JoinLobbyEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class LaCorbeille extends JavaPlugin {
-    private ConfigManager configManager;
     @Override
     public void onEnable() {
         //Commands
@@ -18,7 +17,7 @@ public final class LaCorbeille extends JavaPlugin {
 
         //Events
         getServer().getPluginManager().registerEvents(new JoinLobbyEvent(), this);
-        getServer().getPluginManager().registerEvents(new JoinEvent(configManager), this);
+        getServer().getPluginManager().registerEvents(new JoinEvent(this), this);
 
         //Logger
         getLogger().info("Plugin active !");
