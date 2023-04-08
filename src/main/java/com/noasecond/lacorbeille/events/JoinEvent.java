@@ -20,11 +20,8 @@ public class JoinEvent implements Listener {
         ConfigManager configManager = new ConfigManager(plugin, "colors.yml");
         ChatColor color = configManager.getPlayerColor(player);
         if (color != null) {
-            player.setDisplayName(color + player.getName());
-            player.setPlayerListName(color + player.getName());
-            Bukkit.getServer().broadcastMessage(player.getName() + " a rejoint le serveur avec la couleur " + color + " !");
-        } else {
-            Bukkit.getServer().broadcastMessage(player.getName() + " a rejoint le serveur sans couleur !");
+            player.setDisplayName(color + player.getName() + ChatColor.RESET); //Color in tchat
+            player.setPlayerListName(color + player.getName()); //Color in tablist
         }
     }
 }
