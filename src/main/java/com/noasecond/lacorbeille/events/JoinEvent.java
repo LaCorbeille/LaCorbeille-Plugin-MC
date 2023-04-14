@@ -1,7 +1,6 @@
 package com.noasecond.lacorbeille.events;
 
 import com.noasecond.lacorbeille.ConfigManager;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
